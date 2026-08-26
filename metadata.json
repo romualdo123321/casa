@@ -1,0 +1,6 @@
+{
+  "name": "Bate-Papo MSN Classic",
+  "description": "Bate-papo em tempo real estilo MSN Messenger com opção de foto de perfil personalizada ao entrar, chamar atenção (nudge), envio de fotos e arquivos, gravação de áudio, emoticons clássicos e chat privado.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

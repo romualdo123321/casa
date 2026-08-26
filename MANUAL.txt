@@ -1,0 +1,24 @@
+
+
+
+1
+
+npm install
+
+npm run dev
+
+
+Servidor de Gerenciamento de Perfil ativo na porta 3000
+
+Acesse em: http://localhost:3000
+
+
+2
+
+
+Dica para Build de Produção (Opcional):
+Se quiser gerar a versão final otimizada para publicação:
+code
+Powershell
+npm run build
+npm start
