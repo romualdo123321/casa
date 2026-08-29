@@ -1,0 +1,6 @@
+{
+  "name": "Bate-Papo MSN Classic",
+  "description": "Bate-papo em tempo real estilo MSN Messenger com foto de perfil personalizada, painel administrativo por URL (?admin=true), disparador de banners/propagandas, auto-limpeza de mensagens em 3 horas (texto, foto, áudio), rádio online ao vivo, chat privado com transmissão de webcam P2P (WebRTC).",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
