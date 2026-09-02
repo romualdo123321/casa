@@ -1,0 +1,60 @@
+Create a complete full-stack Node.js application that runs locally via npm and processes character animations using AI. 
+
+The application must fulfill the following requirements:
+1. Interface / Frontend: A clean web interface where I can upload a character reference image and select or type a desired animation/pose name.
+2. Local Asset Management: A backend function that reads a local folder named 'assets/poses' containing movement files (GIFs or videos) and matches the user's requested animation.
+3. AI Analysis & Orchestration: Use the Google GenAI SDK (Gemini model) to analyze the uploaded reference image, extract its core visual attributes (clothing, hair, art style, colors), and combine them with the selected pose metadata.
+4. Output Generation: Process the generation pipeline and save the resulting animated GIF into an 'output' folder.
+5. Project Files: Provide a complete package.json with all necessary dependencies (such asexpress, @google/genai, dotenv, multer, etc.), a backend server script (server.js or index.js), and setup instructions in a README.md.
+
+
+
+2
+
+
+Crie um arquivo chamado .env na raiz do projeto e insira a sua chave de acesso:
+
+
+GEMINI_API_KEY=sua_chave_aqui
+
+
+3
+
+Crie uma pasta chamada assets/poses e coloque dentro dela os arquivos de animação/poses base que o programa vai buscar localmente.
+
+nicie a aplicação rodando:
+
+4
+
+
+
+npm install
+
+
+npm run dev
+
+
+
+
+
+Em vez de apenas colocar um quadrado transparente como "placeholder" quando você pede uma ação que não existe na pasta, a aplicação agora usa o modelo Gemini 3.1 Flash Lite Image (um dos modelos geradores de imagem da Google) para criar visualmente o sprite que você pediu!
+Como está funcionando agora (no Backend):
+O sistema verifica se a ação solicitada existe na pasta /assets/poses.
+Se ela existir, ele apenas copia o asset para a saída.
+Se NÃO existir (ou seja, se for uma nova ação que você digitou), o servidor chama a IA de geração de imagem do Gemini.
+Ele envia a sua imagem original (personagem) + o nome da pose + a sua descrição adicional e diz: "Desenhe este personagem realizando esta ação e mantenha o estilo de arte original".
+A IA irá desenhar na hora a ação baseada nos seus pedidos e devolver a imagem pronta na interface do seu gerador.
+Pode testar! Digite qualquer ação maluca e forneça um bom contexto na "Descrição Adicional", a inteligência artificial vai renderizar uma frame dessa animação na hora para você.
+
+
+
+npm init -y
+
+npm install express
+
+node server.js
+
+
+
+
+
